@@ -1,0 +1,151 @@
+﻿<Window
+    x:Class="TPV.Vista.VentanaPreInicio"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:TPV.Vista"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Inicio TPV"
+    Width="800"
+    Height="450"
+    Closing="Window_Closing"
+    Icon="/Recursos/Imagenes/ISOLOGOJMCP16.png"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="ToolWindow"
+    mc:Ignorable="d" Style="{DynamicResource WindowStyleFondo}">
+    <Grid Margin="0,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="137*" />
+            <ColumnDefinition Width="63*" />
+        </Grid.ColumnDefinitions>
+
+        <GroupBox
+            x:Name="grpBD"
+            Grid.ColumnSpan="2"
+            Margin="67,20,81,275"
+            Header="Conexión BD"
+            Visibility="Visible">
+            <!--  Collapsed para invisible  -->
+            <Grid Margin="0,0,20,0">
+                <Label
+                    Grid.Row="0"
+                    Width="40"
+                    Height="26"
+                    Margin="57,10,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Host" />
+                <TextBox
+                    x:Name="txtBHost"
+                    Width="120"
+                    Margin="57,0,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Text="127.0.0.1"
+                    TextWrapping="Wrap" />
+                <Label
+                    Grid.Row="0"
+                    Width="50"
+                    Height="26"
+                    Margin="228,10,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Puerto" />
+                <TextBox
+                    x:Name="txtBPuerto"
+                    Width="58"
+                    Margin="228,0,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Text="12470"
+                    TextWrapping="Wrap" />
+                <Label
+                    Grid.Row="0"
+                    Width="60"
+                    Height="26"
+                    Margin="318,10,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Usuario" />
+                <TextBox
+                    x:Name="txtBUsuario"
+                    Width="95"
+                    Margin="318,0,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Text="josemankapi"
+                    TextWrapping="Wrap" />
+                <PasswordBox
+                    x:Name="txtBPassword"
+                    Width="126"
+                    Margin="443,0,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Password="nonotiene-20" />
+                <Label
+                    Grid.Row="0"
+                    Height="26"
+                    Margin="443,10,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Contraseña" />
+            </Grid>
+        </GroupBox>
+        <CheckBox
+            x:Name="chkNube"
+            Grid.ColumnSpan="2"
+            Margin="447,159,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Checked="chkNube_Checked"
+            Content="BD en la nube"
+            IsChecked="True"
+            ToolTip="Desactivado temporalmente"
+            Unchecked="chkNube_Unchecked" />
+        <Button
+            x:Name="btnConectar"
+            Width="98"
+            Height="25"
+            Margin="335,154,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="btnConectar_Click"
+            Content="Conectar" />
+
+        <GroupBox
+            x:Name="grpTienda"
+            Grid.ColumnSpan="2"
+            Margin="67,217,81,84"
+            Header="Seleccione tienda">
+            <Grid Width="647" HorizontalAlignment="Left">
+                <ComboBox
+                    x:Name="cmbBTiendas"
+                    Margin="186,31,188,0"
+                    VerticalAlignment="Top"
+                    HorizontalContentAlignment="Center"
+                    DisplayMemberPath="Descripcion"
+                    ItemsSource="{Binding Tiendas}" />
+            </Grid>
+        </GroupBox>
+        <Button
+            x:Name="btnTienda"
+            Width="147"
+            Height="32"
+            Margin="319,355,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="btnTienda_Click"
+            Content="Confirmar tienda"
+            RenderTransformOrigin="0.472,0.602" />
+        <CheckBox
+            x:Name="chkDebug"
+            Grid.ColumnSpan="2"
+            Margin="498,365,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Debug Mode"
+            IsChecked="True"
+            ToolTip="Facilita la interacción y diagnóstico con el Soporte de la aplicación" />
+    </Grid>
+</Window>

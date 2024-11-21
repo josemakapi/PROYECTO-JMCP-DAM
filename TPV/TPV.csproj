@@ -1,0 +1,114 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.17763.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Title>TPV</Title>
+    <Authors>José Manuel Calles Piñas</Authors>
+    <Company>JMCP</Company>
+    <Product>TPV JMCP</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Recursos\Fuentes\WHOAA.ttf" />
+    <None Remove="Recursos\Imagenes\btnExit.png" />
+    <None Remove="Recursos\Imagenes\encargado.png" />
+    <None Remove="Recursos\Imagenes\exit.png" />
+    <None Remove="Recursos\Imagenes\Image1.png" />
+    <None Remove="Recursos\Imagenes\ISOLOGOJMCP1024.jpg" />
+    <None Remove="Recursos\Imagenes\ISOLOGOJMCP128.jpg" />
+    <None Remove="Recursos\Imagenes\ISOLOGOJMCP16.png" />
+    <None Remove="Recursos\Imagenes\ISOLOGOJMCP64.jpg" />
+    <None Remove="Recursos\Imagenes\offBtn130.png" />
+    <None Remove="Recursos\Imagenes\offBtn50.png" />
+    <None Remove="Recursos\Imagenes\offBtn64.png" />
+    <None Remove="Recursos\Imagenes\pngegg48.bmp" />
+    <None Remove="Recursos\Imagenes\pngegg48_.png" />
+    <None Remove="Recursos\Imagenes\Productos\5hsomaki.png" />
+    <None Remove="Recursos\Imagenes\Productos\californiamaki.png" />
+    <None Remove="Recursos\Imagenes\Productos\copavino.png" />
+    <None Remove="Recursos\Imagenes\Productos\evian.png" />
+    <None Remove="Recursos\Imagenes\Productos\futomaki.png" />
+    <None Remove="Recursos\Imagenes\Productos\ginger.png" />
+    <None Remove="Recursos\Imagenes\Productos\gunkanmaki.png" />
+    <None Remove="Recursos\Imagenes\Productos\hosomaki.png" />
+    <None Remove="Recursos\Imagenes\Productos\iniozuki.png" />
+    <None Remove="Recursos\Imagenes\Productos\maguronigiri.png" />
+    <None Remove="Recursos\Imagenes\Productos\nigiri.png" />
+    <None Remove="Recursos\Imagenes\Productos\palillos.png" />
+    <None Remove="Recursos\Imagenes\Productos\philadelphiaroll.png" />
+    <None Remove="Recursos\Imagenes\Productos\sake.png" />
+    <None Remove="Recursos\Imagenes\Productos\sapporo.png" />
+    <None Remove="Recursos\Imagenes\Productos\soja.png" />
+    <None Remove="Recursos\Imagenes\Productos\triFutomaki.png" />
+    <None Remove="Recursos\Imagenes\Productos\uramaki.png" />
+    <None Remove="Recursos\Imagenes\Productos\wasabi.png" />
+    <None Remove="Recursos\Imagenes\profile.png" />
+    <None Remove="Recursos\Imagenes\Temas\fondoAC.jpg" />
+    <None Remove="Recursos\Imagenes\Temas\fondoOriginal.png" />
+    <None Remove="Recursos\Imagenes\vendedor.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="2.25.0" />
+    <PackageReference Include="Nevron.Nov.Diagram" Version="24.6.3.12" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Recursos\Fuentes\WHOAA.ttf" />
+    <Resource Include="Recursos\Imagenes\btnExit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\encargado.png" />
+    <Resource Include="Recursos\Imagenes\exit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\Image1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\ISOLOGOJMCP1024.jpg" />
+    <Resource Include="Recursos\Imagenes\ISOLOGOJMCP128.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\ISOLOGOJMCP16.png" />
+    <Resource Include="Recursos\Imagenes\ISOLOGOJMCP64.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\offBtn130.png" />
+    <Resource Include="Recursos\Imagenes\offBtn50.png" />
+    <Resource Include="Recursos\Imagenes\offBtn64.png" />
+    <Resource Include="Recursos\Imagenes\pngegg48.bmp" />
+    <Resource Include="Recursos\Imagenes\pngegg48_.png" />
+    <Resource Include="Recursos\Imagenes\Productos\5hsomaki.png" />
+    <Resource Include="Recursos\Imagenes\Productos\californiamaki.png" />
+    <Resource Include="Recursos\Imagenes\Productos\copavino.png" />
+    <Resource Include="Recursos\Imagenes\Productos\evian.png" />
+    <Resource Include="Recursos\Imagenes\Productos\futomaki.png" />
+    <Resource Include="Recursos\Imagenes\Productos\ginger.png" />
+    <Resource Include="Recursos\Imagenes\Productos\gunkanmaki.png" />
+    <Resource Include="Recursos\Imagenes\Productos\hosomaki.png" />
+    <Resource Include="Recursos\Imagenes\Productos\iniozuki.png" />
+    <Resource Include="Recursos\Imagenes\Productos\maguronigiri.png" />
+    <Resource Include="Recursos\Imagenes\Productos\nigiri.png" />
+    <Resource Include="Recursos\Imagenes\Productos\palillos.png" />
+    <Resource Include="Recursos\Imagenes\Productos\philadelphiaroll.png" />
+    <Resource Include="Recursos\Imagenes\Productos\sake.png" />
+    <Resource Include="Recursos\Imagenes\Productos\sapporo.png" />
+    <Resource Include="Recursos\Imagenes\Productos\soja.png" />
+    <Resource Include="Recursos\Imagenes\Productos\triFutomaki.png" />
+    <Resource Include="Recursos\Imagenes\Productos\uramaki.png" />
+    <Resource Include="Recursos\Imagenes\Productos\wasabi.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\profile.png" />
+    <Resource Include="Recursos\Imagenes\Temas\fondoAC.jpg" />
+    <Resource Include="Recursos\Imagenes\Temas\fondoOriginal.png" />
+    <Resource Include="Recursos\Imagenes\vendedor.png" />
+  </ItemGroup>
+
+</Project>
