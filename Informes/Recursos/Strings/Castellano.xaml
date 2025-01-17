@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="Informes.Recursos.Strings.Castellano"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <x:String x:Key="headerConfigText">Ajustes</x:String>
+    <x:String x:Key="headerHelpText">Manual de usuario</x:String>
+    <x:String x:Key="headerAboutText">Sobre esta App</x:String>
+    <x:String x:Key="headerAdminText">Modo Admin</x:String>
+    <x:String x:Key="headerInformeVentaDia">Ventas por Día</x:String>
+    <x:String x:Key="headerInformeVentasTotales">Ventas Totales</x:String>
+    <x:String x:Key="cardNumTicket">Número de Tickets</x:String>
+    <x:String x:Key="cardCantDevol">Importe de Devoluciones</x:String>
+    <x:String x:Key="cardVentaTotal">Venta Total</x:String>
+    <x:String x:Key="cardTicketMenor">Ticket de Menor Importe</x:String>
+    <x:String x:Key="cardTicketPuntoMedio">Punto Medio Valor Tickets</x:String>
+    <x:String x:Key="cardMejorVendedor">Mejor Vendedor</x:String>
+    <x:String x:Key="cardMediaTickets">Media de Todos los Tickets</x:String>
+    <x:String x:Key="cardTicketMayor">Ticket de Mayor Importe</x:String>
+    <x:String x:Key="headerRegisterText">Alta usuario</x:String>
+    <x:String x:Key="temaOriginalName">Original (recomendado)</x:String>
+    <x:String x:Key="temaACName">Alto contraste</x:String>
+    <x:String x:Key="tamLetraBig">Grande</x:String>
+    <x:String x:Key="tamLetraSmall">Pequeña</x:String>
+    <x:String x:Key="idiomaCastellano">Castellano</x:String>
+    <x:String x:Key="idiomaEnglish">Inglés</x:String>
+    <x:String x:Key="optIdioma">Idioma:</x:String>
+    <x:String x:Key="optVisualTheme">Tema visual:</x:String>
+    <x:String x:Key="optFontSize">Tamaño de letra:</x:String>
+    <x:String x:Key="keyword">Palabra clave</x:String>
+    <x:String x:Key="exitApp">Salir de Informes TPV</x:String>
+    <x:String x:Key="txtAbout">Esta aplicación se distribuye conjunta e inseparablemente con TPV JMCP. Para cualquier duda, póngase en contacto directamente con su autor haciendo click en la siguiente imagen:</x:String>
+
+</ResourceDictionary>

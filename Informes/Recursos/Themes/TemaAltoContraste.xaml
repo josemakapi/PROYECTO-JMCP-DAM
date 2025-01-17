@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="Informes.Recursos.Themes.TemaAltoContraste"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <x:String x:Key="imagenFondo">fondoac.png</x:String>
+
+    <Color x:Key="ColorFlyout">Black</Color>
+    <Color x:Key="ColorFondoFlyout">Black</Color>
+    <Color x:Key="LabelColorText">White</Color>
+    <Color x:Key="ColorTitulo">White</Color>
+    <Color x:Key="DisabledLabelColorText">Gray</Color>
+    <Color x:Key="HeaderColorText">White</Color>
+    <Color x:Key="HeaderColor">Black</Color>
+    <Color x:Key="ColorBotonTransparente">#3FFFFFFF</Color>
+    <Color x:Key="ColorBotonTraslucido">#5FFFFFFF</Color>
+    <Color x:Key="ColorBotonSolido">#FFFFFF</Color>
+    <Color x:Key="ColorFondoTarjeta">#1AFFFFFF</Color>
+    <Color x:Key="ColorBotonesBox">#1AFFFFFF</Color>
+    <Color x:Key="ColorBordeFrame">#7FFFFFFF</Color>
+    <Color x:Key="ColorFondoFrame">#2AFFFFFF</Color>
+    <Color x:Key="ColorLineaFrame">#7FFFFFFF</Color>
+
+    <Style x:Key="btnBoxStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{DynamicResource ColorBotonesBox}" />
+        <Setter Property="FontFamily" Value="OpenSansSemibold" />
+        <Setter Property="TextColor" Value="White" />
+    </Style>
+
+    <Style TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource LabelColorText}" />
+    </Style>
+
+    <Style x:Key="entrySolidStyle" TargetType="Entry">
+        <Setter Property="BackgroundColor" Value="#1AFFFFFF" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="FontFamily" Value="OpenSansRegular" />
+    </Style>
+
+    <Style x:Key="btnSolidStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{DynamicResource ColorBotonSolido}" />
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="BorderColor" Value="#5FFFFFFF" />
+        <Setter Property="FontFamily" Value="OpenSansRegular" />
+    </Style>
+
+    <Style x:Key="btnTraslucidStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{DynamicResource ColorBotonTraslucido}" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="BorderColor" Value="#5FFFFFFF" />
+        <Setter Property="FontFamily" Value="OpenSansRegular" />
+    </Style>
+
+    <Style x:Key="btnTransparentStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{DynamicResource ColorBotonTransparente}" />
+        <Setter Property="BorderColor" Value="White" />
+        <Setter Property="FontFamily" Value="OpenSansRegular" />
+        <Setter Property="TextColor" Value="White" />
+    </Style>
+
+    <Style x:Key="btnSalir" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{DynamicResource ColorBotonTraslucido}" />
+        <Setter Property="BorderColor" Value="Transparent" />
+        <Setter Property="FontFamily" Value="OpenSansSemibold" />
+        <Setter Property="TextColor" Value="White" />
+    </Style>
+
+</ResourceDictionary>

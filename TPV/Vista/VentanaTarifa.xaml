@@ -1,0 +1,46 @@
+﻿<Window
+    x:Class="TPV.Vista.VentanaTarifa"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:TPV.Vista"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Seleccione tarifa"
+    Width="411"
+    Height="273"
+    Icon="/Recursos/Imagenes/ISOLOGOJMCP16.png"
+    ResizeMode="NoResize"
+    ShowInTaskbar="False"
+    Style="{DynamicResource WindowStyleFondo}"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Grid>
+        <Label
+            Margin="0,21,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Content="Selección de tarifa"
+            Style="{DynamicResource Titulo}" />
+        <ComboBox
+            x:Name="cmbTarifa"
+            Width="256"
+            Margin="0,78,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            DisplayMemberPath="Descripcion"
+            ItemsSource="{Binding Tarifa}"
+            Style="{DynamicResource EstiloCombos}" />
+        <Button
+            x:Name="btnTarifa"
+            Width="73"
+            Height="28"
+            Margin="0,196,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Click="btnTarifa_Click"
+            Content="Aceptar"
+            Style="{DynamicResource BotonResaltado}"
+            ToolTip="Aplicar tarifa" />
+    </Grid>
+</Window>

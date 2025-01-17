@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Informes.Vista.HelpPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="shellAyuda"
+    BackgroundImageSource="{DynamicResource imagenFondo}">
+    <Grid RowDefinitions="Auto,*">
+
+        <Grid
+            Grid.Row="0"
+            BackgroundColor="{DynamicResource HeaderColor}"
+            ColumnDefinitions="Auto,*"
+            RowDefinitions="*,*">
+            <Image
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="10,10,10,10"
+                HeightRequest="60"
+                HorizontalOptions="Start"
+                InputTransparent="True"
+                Source="helppage.png"
+                ToolTipProperties.Text="En este apartado podrá ver las ventas diarias del TPV"
+                WidthRequest="60" />
+            <Label
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="0,0,10,10"
+                BackgroundColor="Transparent"
+                FontFamily="Heavitas"
+                FontSize="28"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="{DynamicResource headerHelpText}"
+                TextColor="{DynamicResource HeaderColorText}"
+                VerticalOptions="Center" />
+        </Grid>
+        <ScrollView Grid.Row="1">
+            <Grid Margin="60,0,60,40" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,*">
+                <Frame
+                    Grid.Row="0"
+                    Margin="0,40,0,40"
+                    BackgroundColor="{DynamicResource ColorFondoFrame}"
+                    BorderColor="{DynamicResource ColorBordeFrame}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Start">
+                    <Label
+                        FontAttributes="Bold"
+                        FontFamily="grafiti2"
+                        HorizontalOptions="Center"
+                        SemanticProperties.Hint="Informes TPV JMCP"
+                        Text="Informes TPV JMCP" />
+                </Frame>
+
+                <Label
+                    Grid.Row="1"
+                    Margin="0,0,0,20"
+                    FontFamily="Roboto-Black"
+                    HorizontalOptions="Center"
+                    TextColor="{DynamicResource LabelColorText}"
+                    Text="Esta app está diseñada para ser usada conjuntamente a TPV JMCP" />
+                <Label
+                    Grid.Row="4"
+                    Margin="0,0,0,5"
+                    FontFamily="Roboto-Black"
+                    HorizontalOptions="Start"
+                    TextColor="{DynamicResource LabelColorText}"
+                    SemanticProperties.HeadingLevel="Level2"
+                    Text="Apartado Ventas Totales:" />
+                <Label
+                    Grid.Row="5"
+                    Margin="10,0,0,5"
+                    FontFamily="Roboto-Medium"
+                    HorizontalOptions="Start"
+                    TextColor="{DynamicResource LabelColorText}"
+                    Text="En este apartado se muestran datos estadísticos útiles para conocer los datos más relevantes de los tickets vendidos con la aplicación TPV JMCP. El rango de tiempo abarcado es el total desde que se comenzó a vender en la tienda." />
+                <Label
+                    Grid.Row="6"
+                    Margin="0,0,0,5"
+                    FontFamily="Roboto-Black"
+                    HorizontalOptions="Start"
+                    SemanticProperties.HeadingLevel="Level2"
+                    TextColor="{DynamicResource LabelColorText}"
+                    Text="Apartado Ventas Diarias:" />
+                <Label
+                    Grid.Row="7"
+                    Margin="10,0,0,5"
+                    FontFamily="Roboto-Medium"
+                    HorizontalOptions="Start"
+                    TextColor="{DynamicResource LabelColorText}"
+                    Text="Aquí se muestran los mismos datos datos que en apartado anterior pero se puede seccionar seleccionando el día en el calendario." />
+                <Label
+                    Grid.Row="8"
+                    Margin="0,0,0,5"
+                    FontFamily="Roboto-Black"
+                    HorizontalOptions="Start"
+                    SemanticProperties.HeadingLevel="Level2"
+                    TextColor="{DynamicResource LabelColorText}"
+                    Text="Uso del programa y gestión de usuarios:" />
+                <Label
+                    Grid.Row="9"
+                    Margin="10,0,0,5"
+                    FontFamily="Roboto-Medium"
+                    HorizontalOptions="Start"
+                    TextColor="{DynamicResource LabelColorText}"
+                    Text="Este programa permite la creación de múltiles usuarios por cada tienda, pero sólamente los que tengan perfil de administrador pueden eliminar o dar permisos a otros usuarios estándar. En la parte inferior del menú lateral aparecerá un distintivo en caso de que sean administradores." />
+            </Grid>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Informes.Vista.PLogin"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="loginShell"
+    BackgroundImageSource="{DynamicResource imagenFondo}"
+    HeightRequest="2400"
+    WidthRequest="1080">
+
+    <Grid RowDefinitions="Auto,Auto,Auto,*">
+
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="TapGestureRecognizer_Tapped" />
+        </Grid.GestureRecognizers>
+
+        <Label
+            Grid.Row="0"
+            Margin="0,50,0,40"
+            BackgroundColor="Transparent"
+            FontFamily="Heavitas"
+            FontSize="40"
+            HorizontalOptions="Center"
+            Text="Informes TPV" />
+        <Image
+            Grid.Row="1"
+            Margin="0,0,0,10"
+            Aspect="AspectFit"
+            HeightRequest="200"
+            InputTransparent="True"
+            Source="informesportada.png"
+            WidthRequest="200" />
+
+        <Grid
+            Grid.Row="2"
+            ColumnDefinitions="*,*,*"
+            HorizontalOptions="Center"
+            RowDefinitions="*,*,*,*">
+
+            <HorizontalStackLayout Grid.Row="0" Margin="0,20,0,0">
+                <Entry
+                    x:Name="txtUser"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    Margin="1"
+                    BackgroundColor="#03FFFFFF"
+                    FontSize="16"
+                    HeightRequest="40"
+                    IsTextPredictionEnabled="True"
+                    Placeholder="Usuario"
+                    Style="{DynamicResource entrySolidStyle}"
+                    Text="admin"
+                    ToolTipProperties.Text="Escribe aquí tu nombre de usuario"
+                    VerticalOptions="End"
+                    WidthRequest="200" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Grid.Row="1" Margin="0,0,0,30">
+                <Entry
+                    x:Name="txtPass"
+                    HeightRequest="40"
+                    IsPassword="True"
+                    Placeholder="Contraseña"
+                    Style="{DynamicResource entrySolidStyle}"
+                    Text="admin"
+                    ToolTipProperties.Text="Escribe aquí tu contraseña"
+                    WidthRequest="200" />
+                <Button
+                    x:Name="btnMostrar"
+                    Margin="10,0,0,0"
+                    BackgroundColor="{DynamicResource ColorBotonTraslucido}"
+                    HeightRequest="20"
+                    ImageSource="eye_pass_tiny.png"
+                    Pressed="btnMostrar_Pressed"
+                    Released="btnMostrar_Released"
+                    ToolTipProperties.Text="Mostrar contraseña"
+                    WidthRequest="20" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="2"
+                HorizontalOptions="Center"
+                VerticalOptions="Start">
+                <Button
+                    x:Name="btnConectar"
+                    Margin="10,30,10,0"
+                    Clicked="btnConectar_Clicked"
+                    Style="{DynamicResource btnTraslucidStyle}"
+                    Text="Conectar"
+                    WidthRequest="100" />
+                <Button
+                    x:Name="btnCancelar"
+                    Margin="10,30,10,0"
+                    Clicked="btnCancelar_Clicked"
+                    Style="{DynamicResource btnTraslucidStyle}"
+                    Text="Cancelar"
+                    WidthRequest="100" />
+            </HorizontalStackLayout>
+
+        </Grid>
+
+        <HorizontalStackLayout
+            Grid.Row="3"
+            Margin="0,10,0,0"
+            BackgroundColor="Transparent"
+            HorizontalOptions="Center"
+            VerticalOptions="End">
+            <Label
+                Margin="5,5,5,40"
+                Text="¿No tienes usuario?"
+                VerticalTextAlignment="Center"
+                WidthRequest="150" />
+            <Button
+                x:Name="btnAltaUsuario"
+                Margin="5,5,5,40"
+                Clicked="btnAltaUsuario_Clicked"
+                Style="{DynamicResource btnSolidStyle}"
+                Text="Alta"
+                WidthRequest="100" />
+        </HorizontalStackLayout>
+
+    </Grid>
+</ContentPage>

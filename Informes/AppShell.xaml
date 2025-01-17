@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Informes.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Informes"
+    xmlns:vista="clr-namespace:Informes.Vista"
+    x:Name="shellEstructuraNavegacion"
+    BackgroundColor="{DynamicResource ColorFlyout}"
+    FlyoutBackgroundColor="{DynamicResource ColorFondoFlyout}"
+    FlyoutBehavior="Disabled"
+    FlyoutHeaderBehavior="CollapseOnScroll">
+
+    <Shell.FlyoutHeader>
+        <VerticalStackLayout>
+            <Image
+                HeightRequest="256"
+                SemanticProperties.Hint="Logo de la aplicación"
+                Source="isologo256jmcp.jpg"
+                WidthRequest="256" />
+            <Label
+                x:Name="lblName"
+                Margin="0,0,0,10"
+                HorizontalOptions="Center"
+                TextColor="Violet" />
+        </VerticalStackLayout>
+    </Shell.FlyoutHeader>
+
+    <ShellContent
+        x:Name="loginSC"
+        ContentTemplate="{DataTemplate vista:PLogin}"
+        Route="login" />
+
+    <FlyoutItem
+        x:Name="informesTotalesFy"
+        Title="{DynamicResource headerInformeVentasTotales}"
+        Icon="news.png">
+        <ShellContent
+            ContentTemplate="{DataTemplate vista:PInformesTotales}"
+            Icon="news.png"
+            SemanticProperties.Description="Informe de Ventas Totales" />
+    </FlyoutItem>
+
+    <FlyoutItem
+        x:Name="informesFy"
+        Title="{DynamicResource headerInformeVentaDia}"
+        Icon="news.png">
+        <ShellContent
+            ContentTemplate="{DataTemplate vista:PInforme}"
+            Icon="news.png"
+            SemanticProperties.Description="Informe de Ventas Diarias" />
+    </FlyoutItem>
+
+    <FlyoutItem
+        x:Name="configFy"
+        Title="{DynamicResource headerConfigText}"
+        Icon="settings.png">
+        <Tab Title="{DynamicResource headerConfigText}">
+            <ShellContent ContentTemplate="{DataTemplate vista:ConfigPage}" Icon="settings.png" />
+        </Tab>
+        <Tab
+            x:Name="TabAdmin"
+            Title="{DynamicResource headerAdminText}"
+            IsVisible="False">
+            <ShellContent ContentTemplate="{DataTemplate vista:AdminPage}" Icon="settings.png" />
+        </Tab>
+    </FlyoutItem>
+
+    <Shell.ToolbarItems>
+        <ToolbarItem
+            x:Name="itemAyuda"
+            Clicked="itemAyuda_Clicked"
+            IconImageSource="helppage.png"
+            Order="Primary"
+            Text="{DynamicResource headerHelpText}" />
+        <ToolbarItem
+            x:Name="itemSobre"
+            Clicked="itemSobre_Clicked"
+            Order="Secondary"
+            Text="{DynamicResource headerAboutText}" />
+    </Shell.ToolbarItems>
+
+    <Shell.FlyoutFooter>
+        <VerticalStackLayout x:Name="footAdmin" IsVisible="False">
+            <Image
+                HeightRequest="100"
+                HorizontalOptions="Center"
+                SemanticProperties.Description="El modo admin está habilitado"
+                Source="adminmode.png"
+                VerticalOptions="Start"
+                WidthRequest="100" />
+            <Label
+                Margin="0,5,0,5"
+                HorizontalOptions="Center"
+                Text="Admin mode enabled"
+                TextColor="DarkRed" />
+        </VerticalStackLayout>
+
+    </Shell.FlyoutFooter>
+
+</Shell>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Application
+    x:Class="Informes.App"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Informes">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Recursos/Themes/TemaOriginal.xaml" />
+                <ResourceDictionary Source="Recursos/Styles/FuentesNormales.xaml" />
+                <ResourceDictionary Source="Recursos/Strings/Castellano.xaml" />
+                <ResourceDictionary Source="Recursos/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Recursos/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

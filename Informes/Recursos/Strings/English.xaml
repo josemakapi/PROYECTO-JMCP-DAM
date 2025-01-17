@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="Informes.Recursos.Strings.English"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <x:String x:Key="headerConfigText">Settings</x:String>
+    <x:String x:Key="headerHelpText">User Manual</x:String>
+    <x:String x:Key="headerAboutText">About this App</x:String>
+    <x:String x:Key="headerAdminText">Admin Mode</x:String>
+    <x:String x:Key="headerInformeVentaDia">Sales by Day</x:String>
+    <x:String x:Key="headerInformeVentasTotales">Total Sales</x:String>
+    <x:String x:Key="cardNumTicket">Number of Tickets</x:String>
+    <x:String x:Key="cardCantDevol">Returns Amount</x:String>
+    <x:String x:Key="cardVentaTotal">Total Sales</x:String>
+    <x:String x:Key="cardTicketMenor">Lowest Ticket Value</x:String>
+    <x:String x:Key="cardTicketPuntoMedio">Median Ticket Value</x:String>
+    <x:String x:Key="cardMejorVendedor">Top Seller</x:String>
+    <x:String x:Key="cardMediaTickets">Average Ticket Value</x:String>
+    <x:String x:Key="cardTicketMayor">Highest Ticket Value</x:String>
+    <x:String x:Key="headerRegisterText">User Registration</x:String>
+    <x:String x:Key="temaOriginalName">Original (recommended)</x:String>
+    <x:String x:Key="temaACName">High contrast</x:String>
+    <x:String x:Key="tamLetraBig">Big</x:String>
+    <x:String x:Key="tamLetraSmall">Small</x:String>
+    <x:String x:Key="idiomaCastellano">Castillian</x:String>
+    <x:String x:Key="idiomaEnglish">English</x:String>
+    <x:String x:Key="optIdioma">Language:</x:String>
+    <x:String x:Key="optVisualTheme">Visual Theme:</x:String>
+    <x:String x:Key="optFontSize">Font Size:</x:String>
+    <x:String x:Key="keyword">Keyword</x:String>
+    <x:String x:Key="exitApp">Exit TPV Reports</x:String>
+    <x:String x:Key="txtAbout">This application is distributed jointly and inseparably with TPV JMCP. For any inquiries, please contact the author clicking at the following image:</x:String>
+</ResourceDictionary>

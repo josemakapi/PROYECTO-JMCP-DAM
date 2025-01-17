@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Perfil 1": {
+      "commandName": "Project",
+      "nativeDebugging": true,
+      "remoteDebugEnabled": false,
+      "sqlDebugging": true,
+      "jsWebView2Debugging": true
+    }
+  }
+}

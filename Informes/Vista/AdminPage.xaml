@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Informes.Vista.AdminPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="shellAdmin"
+    BackgroundImageSource="{DynamicResource imagenFondo}">
+    <Grid RowDefinitions="Auto,*">
+
+        <Grid
+            Grid.Row="0"
+            BackgroundColor="{DynamicResource HeaderColor}"
+            ColumnDefinitions="Auto,*"
+            RowDefinitions="*,*">
+            <Image
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="10,10,10,10"
+                HeightRequest="60"
+                HorizontalOptions="Start"
+                InputTransparent="True"
+                Source="adminmode.png"
+                ToolTipProperties.Text="En este apartado podrá ver las ventas diarias del TPV"
+                WidthRequest="60" />
+            <Label
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="0,0,10,10"
+                BackgroundColor="Transparent"
+                FontFamily="Heavitas"
+                FontSize="28"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="{DynamicResource headerAdminText}"
+                TextColor="{DynamicResource HeaderColorText}"
+                VerticalOptions="Center" />
+        </Grid>
+
+        <ScrollView
+            x:Name="scrollBusquedasG"
+            Grid.Row="1"
+            VerticalOptions="FillAndExpand"
+            VerticalScrollBarVisibility="Always">
+
+
+            <Grid
+                Margin="20,10,0,0"
+                ColumnDefinitions="*,*"
+                HorizontalOptions="Center"
+                Row="0"
+                RowDefinitions="Auto,Auto,Auto"
+                RowSpacing="10">
+                <Label
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,0,0,20"
+                    HorizontalOptions="Center"
+                    Text="Selecciona un usuario con el que operar:" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    HeightRequest="40"
+                    Text="Usuario: "
+                    VerticalTextAlignment="Center"
+                    WidthRequest="120" />
+                <Picker
+                    x:Name="pkUser"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    HeightRequest="20"
+                    HorizontalOptions="Start"
+                    SelectedIndexChanged="pkUser_SelectedIndexChanged"
+                    VerticalOptions="Center"
+                    WidthRequest="150" />
+                <Button
+                    x:Name="btnBorraUser"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Margin="0,20,0,0"
+                    Clicked="btnBorraUser_Clicked"
+                    Style="{DynamicResource btnSolidStyle}"
+                    Text="Borrar"
+                    WidthRequest="120" />
+                <Button
+                    x:Name="btnElevaUser"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Margin="10,20,0,0"
+                    Clicked="btnElevaUser_Clicked"
+                    Style="{DynamicResource btnSolidStyle}"
+                    Text="Hacer admin"
+                    WidthRequest="150" />
+
+            </Grid>
+
+        </ScrollView>
+    </Grid>
+</ContentPage>
