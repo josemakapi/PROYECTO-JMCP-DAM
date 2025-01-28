@@ -2,6 +2,7 @@ namespace Informes.Vista;
 
 using Informes.Controlador;
 using Informes.Modelo;
+using MongoDB.Driver.Linq;
 
 /// <summary>
 /// Página para gestionar los ajustes del usuario
@@ -92,11 +93,11 @@ public partial class ConfigPage : ContentPage
         ControladorComun.CurrentBD!.ActualizarObjeto<UsuarioInformes>(ControladorComun.UsuarioActual!);
         ControladorComun.UsuarioActual!.ActualizaEstilos(true);
 
-        //Como los picker no se actualizan automáticamewnte al cambiar el idioma y tampoco recargando las listas, recargamos la ContentPage
-        ConfigPage currentPage = this;
-        ConfigPage newPage = new ConfigPage();
-        Navigation.RemovePage(currentPage);
-        Navigation.PushAsync(newPage);
+        //Tengo que hacer lo siguiente para que se traduzcan los pickers, pues no accede al diccionario de idiomas a tiempo
+        Navigation.PopToRootAsync();
+        IniciaListaIdiomas();
+        IniciaListaVisuales();
+        IniciaListaTamLetra();
     }
 
     private void Button_Clicked(object sender, EventArgs e)

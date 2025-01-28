@@ -21,11 +21,15 @@ public partial class PLogin : ContentPage
     private void btnMostrar_Pressed(object sender, EventArgs e)
     {
         txtPass.IsPassword = false;
+        btnMostrar.ImageSource = "ojocerrado32.png";
+        ToolTipProperties.SetText(btnMostrar, "Ocultar contraseña");
     }
 
     private void btnMostrar_Released(object sender, EventArgs e)
     {
         txtPass.IsPassword = true;
+        btnMostrar.ImageSource = "ojoabierto32.png";
+        ToolTipProperties.SetText(btnMostrar, "Mostrar contraseña");
     }
 
     /// <summary>
@@ -49,7 +53,6 @@ public partial class PLogin : ContentPage
 
         if (ControladorComun.CurrentBD!.ContarObjetos<UsuarioInformes>() < 1)
         {
-            //ToDo: Unificar creación de usuario si no existe en la BD;
             ControladorComun.CurrentBD.PersistirObjeto<UsuarioInformes>(new UsuarioInformes("admin", 1, "admin", ControladorComun.TiendaActual, "ES", "TemaOriginal", "Medio"));
             DisplayAlert("Error", "No existe ningún usuario", "OK");
         }

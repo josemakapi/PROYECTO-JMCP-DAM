@@ -12,23 +12,28 @@ public partial class AdminPage : ContentPage
 	{
 		InitializeComponent();
         CargaListaUsuariosPicker();
-	}
+    }
 
     /// <summary>
     /// Como indica su nombre, carga y recarga la lista de usuarios para el picker que lo muestra en pantalla.
     /// </summary>
-    private void CargaListaUsuariosPicker()
+    private bool CargaListaUsuariosPicker()
     {
         pkUser.SelectedItem = null;
-        pkUser.ItemsSource = ControladorComun.CargarUsuariosNoAdmin();
+        pkUser.ItemsSource = ControladorComun.CargarUsuariosNoAdminTienda();
         if (pkUser.ItemsSource.Count == 0)
         {
+            btnBorraUser.IsEnabled = false;
+            btnElevaUser.IsEnabled = false;
             pkUser.IsEnabled = false;
+            DisplayAlert("Info", "No existen usuarios para administrar", "OK");
+            return false;
         }
         else
         {
             pkUser.SelectedIndex = 0;
         }
+        return true;
     }
 
     private void Button_Clicked(object sender, EventArgs e)
@@ -85,7 +90,7 @@ public partial class AdminPage : ContentPage
 
                 if (ControladorComun.HacerAdminUsuarioInformes((UsuarioInformes)pkUser.SelectedItem))
                 {
-                    await DisplayAlert("Info", pkUser.SelectedItem+" ya es administrador", "OK");
+                    await DisplayAlert("Info", pkUser.SelectedItem + " se ha convertido en administrador", "OK");
                     this.CargaListaUsuariosPicker();
                 }
                 else

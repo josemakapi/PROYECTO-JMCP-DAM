@@ -36,11 +36,15 @@ public partial class RegisterPage : ContentPage
     private void btnMostrarReg_Pressed(object sender, EventArgs e)
     {
         entPassword.IsPassword = false;
+        btnMostrarReg.ImageSource = "ojocerrado32.png";
+        ToolTipProperties.SetText(btnMostrarReg, "Ocultar contraseña");
     }
 
     private void btnMostrarReg_Released(object sender, EventArgs e)
     {
         entPassword.IsPassword = true;
+        btnMostrarReg.ImageSource = "ojoabierto32.png";
+        ToolTipProperties.SetText(btnMostrarReg, "Mostrar contraseña");
     }
 
     /// <summary>
@@ -63,7 +67,7 @@ public partial class RegisterPage : ContentPage
         }
         else
         {
-            if (ControladorComun.CurrentBD!.BuscarObjetosString<UsuarioInformes>("UsuarioInformes", (string)entUserName.Text).Count < 1)
+            if (ControladorComun.CurrentBD!.BuscarObjetosString<UsuarioInformes>("Nombre", (string)entUserName.Text).Count < 1)
             {
 
                 string visualTheme = (string)pkTema.SelectedItem;

@@ -93,9 +93,10 @@
                         WidthRequest="160" />
                     <Button
                         x:Name="btnMostrarReg"
+                        Padding="0"
                         BackgroundColor="{DynamicResource ColorBotonTraslucido}"
                         HeightRequest="30"
-                        ImageSource="eye_pass_tiny.png"
+                        ImageSource="ojoabierto32.png"
                         Pressed="btnMostrarReg_Pressed"
                         Released="btnMostrarReg_Released"
                         ToolTipProperties.Text="Mostrar contraseña"

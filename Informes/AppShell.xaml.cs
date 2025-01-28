@@ -2,6 +2,7 @@
 using Informes.Datos;
 using Informes.Vista;
 using Informes.Modelo;
+using MongoDB.Driver.Linq;
 namespace Informes
 {
     public partial class AppShell : Shell
@@ -70,70 +71,12 @@ namespace Informes
             {
                 ControladorComun.UsuarioActual.ActualizaEstilos(false);
             }
-
-            //ControladorComun.CurrentBD.DesconectaBD();
-            //Desinstanciamos el objeto que contiene los datos comunes del usuario logado:
             ControladorComun.UsuarioActual = null;
-            //Ahora cerramos las contentPage que hubiera abiertas:
-
-            //while (Navigation.ModalStack.Count > 0) { Navigation.PopModalAsync(); }
-            //Navigation.PopToRootAsync();
-
-            //foreach (Page page in Application.Current!.MainPage!.Navigation.NavigationStack)
-            //{
-            //    Application.Current.MainPage.Navigation.RemovePage(page);
-            //}
-
-            //var navigation = Application.Current.MainPage.Navigation;
-            //foreach (var page in navigation.NavigationStack.ToList()) { navigation.RemovePage(page); }
-            //Shell.Current.GoToAsync("//login");
-
-            /*
-            int numProg = Application.Current!.MainPage!.Navigation.ModalStack.Count;
-
-            while (Application.Current!.MainPage!.Navigation.ModalStack.Count > 0)
-            {
-                Application.Current.MainPage.Navigation.PopModalAsync();
-            }
-            while (Application.Current.MainPage.Navigation.NavigationStack.Count > 1)
-            {
-                Application.Current.MainPage.Navigation.RemovePage(Application.Current.MainPage.Navigation.NavigationStack[0]);
-            }
-            */
-            Logout();
-            
+            LogoutShell();
         }
-
-        public async void Logout()
+        public void LogoutShell()
         {
-            /*
-            var nuevo = Shell.Current.Items.ToArray();
-            for (int i = nuevo.Length - 1; i > 0; i--)
-            {
-                Shell.Current.Items.Remove(nuevo[i]);
-                //Shell.Current.Items.;
-            }
-            await Navigation.PopToRootAsync();
-            */
-
-            
-            // Obtiene todas las páginas de la pila de navegación
-            var navigationStack = Navigation.NavigationStack.ToList();
-
-            // Almacena las páginas en una variable (opcional)
-            //var pages = navigationStack;
-
-            // Cierra todas las páginas excepto la raíz
-            for (int i = navigationStack.Count - 1; i > 0; i--)
-            {
-                //Navigation.RemovePage(navigationStack[i]);
-                Navigation.NavigationStack[i].RemoveLogicalChild(navigationStack[i]);
-            }
-
-            // Si deseas garantizar que la navegación quede en la raíz
-            await Navigation.PopToRootAsync();
-
-            
+            Application.Current!.MainPage = new AppShell();
         }
 
         public void CreaLogout()
@@ -143,6 +86,10 @@ namespace Informes
             logoutSC.IconImageSource = "logout_app.png";
             logoutSC.Clicked += LogoutSC_Clicked;
             this.shellEstructuraNavegacion.Items.Add(logoutSC);
+            // Hay que ver la de filigranas que hay que hacer en MAUI para que el botón de salir
+            // esté en la parte inferior de la pantalla en orden:
+            this.shellEstructuraNavegacion.Items.Remove(this.Items.Where(x => x.AutomationId == "SalirYA").FirstOrDefault());
+            this.shellEstructuraNavegacion.Items.Add(SalirItemSC);
         }
 
         private void LogoutSC_Clicked(object? sender, EventArgs e)
@@ -151,6 +98,14 @@ namespace Informes
             loginSC.Content = new PLogin();
         }
 
+        private async void SalirItem_Clicked(object? sender, EventArgs e)
+        {
+            bool salir = await DisplayAlert("Salir", "¿Estás seguro de que deseas salir?", "Sí", "No");
+            if (salir)
+            {
+                ControladorComun.SalirApp();
+            }
+        }
         public void DestruyeLogout()
         {
             this.shellEstructuraNavegacion.Items.RemoveAt(shellEstructuraNavegacion.Items.Count - 1);
