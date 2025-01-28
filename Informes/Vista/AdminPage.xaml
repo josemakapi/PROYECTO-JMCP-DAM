@@ -20,7 +20,7 @@
                 HorizontalOptions="Start"
                 InputTransparent="True"
                 Source="adminmode.png"
-                ToolTipProperties.Text="En este apartado podrá ver las ventas diarias del TPV"
+                ToolTipProperties.Text="Apartado sólamente accesible para administradores en el cual podrán gestionar las demás cuentas de usuarios"
                 WidthRequest="60" />
             <Label
                 Grid.Row="0"
@@ -39,6 +39,7 @@
         <ScrollView
             x:Name="scrollBusquedasG"
             Grid.Row="1"
+            HorizontalOptions="Center"
             VerticalOptions="FillAndExpand"
             VerticalScrollBarVisibility="Always">
 
@@ -55,41 +56,40 @@
                     Grid.ColumnSpan="2"
                     Margin="0,0,0,20"
                     HorizontalOptions="Center"
-                    Text="Selecciona un usuario con el que operar:" />
+                    Text="{DynamicResource admOperate}" />
                 <Label
                     Grid.Row="1"
                     Grid.Column="0"
                     HeightRequest="40"
-                    Text="Usuario: "
+                    Text="{DynamicResource admUser}"
                     VerticalTextAlignment="Center"
-                    WidthRequest="120" />
+                    WidthRequest="80" />
                 <Picker
                     x:Name="pkUser"
                     Grid.Row="1"
                     Grid.Column="1"
-                    HeightRequest="20"
                     HorizontalOptions="Start"
                     SelectedIndexChanged="pkUser_SelectedIndexChanged"
                     VerticalOptions="Center"
-                    WidthRequest="150" />
+                    WidthRequest="190" />
                 <Button
                     x:Name="btnBorraUser"
                     Grid.Row="2"
                     Grid.Column="0"
-                    Margin="0,20,0,0"
+                    Margin="0,80,0,0"
                     Clicked="btnBorraUser_Clicked"
                     Style="{DynamicResource btnSolidStyle}"
-                    Text="Borrar"
+                    Text="{DynamicResource admBorrarUsuario}"
                     WidthRequest="120" />
                 <Button
                     x:Name="btnElevaUser"
                     Grid.Row="2"
                     Grid.Column="1"
-                    Margin="10,20,0,0"
+                    Margin="10,80,50,00"
                     Clicked="btnElevaUser_Clicked"
                     Style="{DynamicResource btnSolidStyle}"
-                    Text="Hacer admin"
-                    WidthRequest="150" />
+                    Text="{DynamicResource admHacerAdmin}"
+                    WidthRequest="160" />
 
             </Grid>
 

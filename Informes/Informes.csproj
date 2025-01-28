@@ -113,6 +113,10 @@
 	  <None Remove="Recursos\Imagenes\helppage.png" />
 	  <None Remove="Recursos\Imagenes\informe_icon.png" />
 	  <None Remove="Recursos\Imagenes\isologo256jmcp.jpg" />
+	  <None Remove="Recursos\Imagenes\logout_app.png" />
+	  <None Remove="Recursos\Imagenes\logout_app_red.png" />
+	  <None Remove="Recursos\Imagenes\ojoabierto32.png" />
+	  <None Remove="Recursos\Imagenes\ojocerrado32.png" />
 	  <None Remove="Recursos\Imagenes\register.png" />
 	  <None Remove="Recursos\Imagenes\settings.png" />
 	  <None Remove="Recursos\Images\altausuario.png" />
@@ -130,6 +134,10 @@
 	  <MauiImage Include="Recursos\Imagenes\informesportada.png" />
 	  <MauiImage Include="Recursos\Imagenes\informe_icon.png" />
 	  <MauiImage Include="Recursos\Imagenes\isologo256jmcp.jpg" />
+	  <MauiImage Include="Recursos\Imagenes\logout_app.png" />
+	  <MauiImage Include="Recursos\Imagenes\logout_app_red.png" />
+	  <MauiImage Include="Recursos\Imagenes\ojoabierto32.png" />
+	  <MauiImage Include="Recursos\Imagenes\ojocerrado32.png" />
 	  <MauiImage Include="Recursos\Imagenes\settings.png" />
 	</ItemGroup>
 

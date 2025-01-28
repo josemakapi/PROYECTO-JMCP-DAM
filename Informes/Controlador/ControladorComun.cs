@@ -6,6 +6,9 @@ using static Android.Provider.MediaStore;
 
 namespace Informes.Controlador
 {
+    /// <summary>
+    /// Clase que contiene métodos y propiedades comunes a toda la aplicación. Es estática, para que los recursos sean comunes y accesibles en todo momento.
+    /// </summary>
     public class ControladorComun
     {
         public static Datos.BDMongo? CurrentBD { get; set; }
@@ -22,15 +25,17 @@ namespace Informes.Controlador
             Application.Current!.Quit();
         }
 
-        public static List<UsuarioInformes> CargarUsuariosNoAdmin()
+        public static List<UsuarioInformes> CargarUsuariosNoAdminTienda()
         {
-            return CurrentBD!.BuscarObjetosInt<UsuarioInformes>("Perfil", 2);
+            List<UsuarioInformes> lista = CurrentBD!.BuscarObjetosInt<UsuarioInformes>("Perfil", 2);
+            lista.RemoveAll(usuario => usuario.Tienda.CodTienda != TiendaActual!.CodTienda); //Un for each y un for no invertido da problemas al borrar mientras se itera
+            return lista;
         }
 
         public static bool BorrarUsuarioInformes(UsuarioInformes usuario)
         {
             CurrentBD!.EliminarObjeto<UsuarioInformes>(usuario);
-            if (CurrentBD!.BuscarObjeto<UsuarioInformes>(usuario, "Id") != null)
+            if (CurrentBD!.BuscarObjeto<UsuarioInformes>(usuario, "Id").Count > 0)
             {
                 return false;
             }

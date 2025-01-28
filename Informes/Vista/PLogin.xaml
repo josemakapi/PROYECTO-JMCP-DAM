@@ -67,13 +67,14 @@
                 <Button
                     x:Name="btnMostrar"
                     Margin="10,0,0,0"
+                    Padding="0"
                     BackgroundColor="{DynamicResource ColorBotonTraslucido}"
-                    HeightRequest="20"
-                    ImageSource="eye_pass_tiny.png"
+                    HeightRequest="32"
+                    ImageSource="ojoabierto32.png"
                     Pressed="btnMostrar_Pressed"
                     Released="btnMostrar_Released"
                     ToolTipProperties.Text="Mostrar contraseña"
-                    WidthRequest="20" />
+                    WidthRequest="32" />
             </HorizontalStackLayout>
             <HorizontalStackLayout
                 Grid.Row="2"

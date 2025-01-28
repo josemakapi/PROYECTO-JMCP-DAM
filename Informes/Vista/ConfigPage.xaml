@@ -19,7 +19,7 @@
                 HeightRequest="60"
                 HorizontalOptions="Start"
                 InputTransparent="True"
-                Source="informe_icon.png"
+                Source="settings.png"
                 ToolTipProperties.Text="En este apartado podrá ver las ventas diarias del TPV"
                 WidthRequest="60" />
             <Label

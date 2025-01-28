@@ -30,5 +30,9 @@
     <x:String x:Key="keyword">Palabra clave</x:String>
     <x:String x:Key="exitApp">Salir de Informes TPV</x:String>
     <x:String x:Key="txtAbout">Esta aplicación se distribuye conjunta e inseparablemente con TPV JMCP. Para cualquier duda, póngase en contacto directamente con su autor haciendo click en la siguiente imagen:</x:String>
+    <x:String x:Key="admOperate">Selecciona un usuario con el que operar:</x:String>
+    <x:String x:Key="admUser">Usuario</x:String>
+    <x:String x:Key="admBorrarUsuario">Eliminar</x:String>
+    <x:String x:Key="admHacerAdmin">Hacer Admin</x:String>
 
 </ResourceDictionary>

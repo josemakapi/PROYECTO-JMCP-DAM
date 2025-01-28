@@ -15,7 +15,7 @@ namespace Informes.Modelo
         private string _idioma;
         public string Idioma { get => _idioma; set => _idioma = value; }
         private int _perfil;
-        public int Perfil { get => _perfil; set => _perfil = value; }
+        public int Perfil { get => _perfil; set => _perfil = value; } //1=Administrador, 2=Usuario
         private TiendaInformes _tienda;
         public TiendaInformes Tienda { get => _tienda; set => _tienda = value; }
         private string _visualTheme;

@@ -30,4 +30,8 @@
     <x:String x:Key="keyword">Keyword</x:String>
     <x:String x:Key="exitApp">Exit TPV Reports</x:String>
     <x:String x:Key="txtAbout">This application is distributed jointly and inseparably with TPV JMCP. For any inquiries, please contact the author clicking at the following image:</x:String>
+    <x:String x:Key="admOperate">Select an user to operate:</x:String>
+    <x:String x:Key="admUser">User</x:String>
+    <x:String x:Key="admBorrarUsuario">Delete</x:String>
+    <x:String x:Key="admHacerAdmin">Make Admin</x:String>
 </ResourceDictionary>

@@ -34,20 +34,20 @@
     <FlyoutItem
         x:Name="informesTotalesFy"
         Title="{DynamicResource headerInformeVentasTotales}"
-        Icon="news.png">
+        Icon="informe_icon.png">
         <ShellContent
             ContentTemplate="{DataTemplate vista:PInformesTotales}"
-            Icon="news.png"
+            Icon="informe_icon.png"
             SemanticProperties.Description="Informe de Ventas Totales" />
     </FlyoutItem>
 
     <FlyoutItem
         x:Name="informesFy"
         Title="{DynamicResource headerInformeVentaDia}"
-        Icon="news.png">
+        Icon="informe_icon.png">
         <ShellContent
             ContentTemplate="{DataTemplate vista:PInforme}"
-            Icon="news.png"
+            Icon="informe_icon.png"
             SemanticProperties.Description="Informe de Ventas Diarias" />
     </FlyoutItem>
 
@@ -66,6 +66,12 @@
         </Tab>
     </FlyoutItem>
 
+    <MenuItem
+        x:Name="SalirItemSC"
+        AutomationId="SalirYA"
+        Clicked="SalirItem_Clicked"
+        IconImageSource="logout_app_red.png"
+        Text="{DynamicResource exitApp}" />
     <Shell.ToolbarItems>
         <ToolbarItem
             x:Name="itemAyuda"
